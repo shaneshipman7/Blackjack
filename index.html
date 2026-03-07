@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blackjack Game</title>
+
+  <!-- Embedded favicon: minimalist black Ace of Spades -->
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADQSURBVFhH7c+xDcAwEAXQv+3c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ+7c2c4QeP8zZ
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blackjack - Fixed</title>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0a1f17;
+    color: #e8e8e8;
+    margin: 0;
+    padding: 12px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+  }
+  h1 {
+    color: #d4af37;
+    margin: 10px 0 18px;
+    font-size: 2.1rem;
+  }
+  #message {
+    font-size: 1.45rem;
+    min-height: 2.4rem;
+    margin: 12px 0;
+    color: #ffeb3b;
+    font-weight: 500;
+  }
+  .hand {
+    margin: 18px 0;
+    padding: 10px;
+    background: rgba(0,0,0,0.35);
+    border-radius: 9px;
+  }
+  .hand h3 {
+    margin: 0 0 8px;
+    color: #bbb;
+    font-size: 1.25rem;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    min-height: 100px;
+  }
+  .card {
+    width: 62px;
+    height: 92px;
+    background: #fefefe;
+    color: #000;
+    border-radius: 7px;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: bold;
+    border: 1px solid #ddd;
+  }
+  .card.red { color: #b71c1c; }
+  .card.back {
+    background: #123623;
+    color: #123623;
+    font-size: 2.4rem;
+    border: 2px solid #2a5d46;
+  }
+  .score { color: #ffd54f; font-weight: bold; font-size: 1.35rem; }
+  .controls {
+    margin: 22px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  button {
+    font-size: 1.05rem;
+    padding: 11px 26px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    min-width: 105px;
+    transition: 0.13s;
+  }
+  #dealBtn, #newGameBtn {
+    background: #d4af37;
+    color: #0d1f17;
+    font-weight: bold;
+  }
+  #hitBtn { background: #2e7d32; color: white; }
+  #standBtn { background: #c62828; color: white; }
+  button:hover:not(:disabled) { filter: brightness(1.12); }
+  button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  @media (max-width: 480px) {
+    .card { width: 56px; height: 86px; font-size: 1.55rem; }
+    h1 { font-size: 1.8rem; }
+    button { padding: 9px 18px; font-size: 0.95rem; min-width: 90px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Blackjack</h1>
+  <div id="message">Click Deal to start</div>
+
+  <div class="hand">
+    <h3>Dealer's hand (<span id="dealer-score" class="score">?</span>)</h3>
+    <div id="dealer-cards" class="cards"></div>
+  </div>
+
+  <div class="hand">
+    <h3>Your hand (<span id="player-score" class="score">0</span>)</h3>
+    <div id="player-cards" class="cards"></div>
+  </div>
+
+  <div class="controls">
+    <button id="dealBtn">Deal</button>
+    <button id="hitBtn" disabled>Hit</button>
+    <button id="standBtn" disabled>Stand</button>
+    <button id="newGameBtn" style="display:none;">New Game</button>
+  </div>
+</div>
+
+<script>
+const suits = ['♠','♥','♦','♣'];
+const values = ['2','3','4','5','6','7','8','9','10','J','Q','K','A'];
+
+let deck = [];
+let playerHand = [];
+let dealerHand = [];
+let gameActive = false;
+
+const els = {
+  dealBtn: document.getElementById('dealBtn'),
+  hitBtn: document.getElementById('hitBtn'),
+  standBtn: document.getElementById('standBtn'),
+  newGameBtn: document.getElementById('newGameBtn'),
+  message: document.getElementById('message'),
+  playerCards: document.getElementById('player-cards'),
+  dealerCards: document.getElementById('dealer-cards'),
+  playerScore: document.getElementById('player-score'),
+  dealerScore: document.getElementById('dealer-score')
+};
+
+function createDeck() {
+  deck = [];
+  for (let s of suits) {
+    for (let v of values) {
+      deck.push({value: v, suit: s});
+    }
+  }
+  // shuffle
+  for (let i = deck.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [deck[i], deck[j]] = [deck[j], deck[i]];
+  }
+}
+
+function cardHTML(card, isHidden = false) {
+  if (isHidden) return `<div class="card back">?</div>`;
+  const color = (card.suit === '♥' || card.suit === '♦') ? 'red' : '';
+  return `<div class="card \( {color}"> \){card.value}${card.suit}</div>`;
+}
+
+function handValue(hand) {
+  let val = 0, aces = 0;
+  for (let c of hand) {
+    if (c.value === 'A') { aces++; val += 11; }
+    else if ('JQK'.includes(c.value)) val += 10;
+    else val += parseInt(c.value) || 0;
+  }
+  while (val > 21 && aces > 0) { val -= 10; aces--; }
+  return val;
+}
+
+function updateDisplay(hideDealer = true) {
+  els.playerCards.innerHTML = playerHand.map(c => cardHTML(c)).join('');
+  els.playerScore.textContent = handValue(playerHand);
+
+  if (hideDealer && dealerHand.length > 0) {
+    els.dealerCards.innerHTML = cardHTML(dealerHand[0]) + cardHTML(null, true);
+    els.dealerScore.textContent = '?';
+  } else {
+    els.dealerCards.innerHTML = dealerHand.map(c => cardHTML(c)).join('');
+    els.dealerScore.textContent = handValue(dealerHand);
+  }
+}
+
+function endGame(msg) {
+  els.message.textContent = msg;
+  gameActive = false;
+  els.hitBtn.disabled = els.standBtn.disabled = true;
+  els.dealBtn.disabled = true;
+  els.newGameBtn.style.display = 'inline-block';
+}
+
+function dealerPlay() {
+  updateDisplay(false);
+  let val = handValue(dealerHand);
+  while (val < 17) {
+    dealerHand.push(deck.pop());
+    val = handValue(dealerHand);
+    updateDisplay(false);
+  }
+  const pVal = handValue(playerHand);
+  if (val > 21) endGame("Dealer busts! You win!");
+  else if (val > pVal) endGame("Dealer wins.");
+  else if (val < pVal) endGame("You win!");
+  else endGame("Push.");
+}
+
+function checkPlayer() {
+  const val = handValue(playerHand);
+  if (val > 21) { endGame("Bust! Dealer wins."); return true; }
+  if (val === 21 && playerHand.length === 2) {
+    endGame("Blackjack! You win!");
+    return true;
+  }
+  return false;
+}
+
+function startGame() {
+  createDeck();
+  playerHand = [deck.pop(), deck.pop()];
+  dealerHand = [deck.pop(), deck.pop()];
+  gameActive = true;
+
+  els.message.textContent = "Hit or Stand?";
+  updateDisplay(true);
+
+  if (checkPlayer()) return;
+
+  els.dealBtn.disabled = true;
+  els.hitBtn.disabled = false;
+  els.standBtn.disabled = false;
+  els.newGameBtn.style.display = 'none';
+}
+
+// Events
+els.dealBtn.onclick = startGame;
+
+els.hitBtn.onclick = () => {
+  if (!gameActive) return;
+  playerHand.push(deck.pop());
+  updateDisplay(true);
+  checkPlayer();
+};
+
+els.standBtn.onclick = () => {
+  if (!gameActive) return;
+  els.hitBtn.disabled = els.standBtn.disabled = true;
+  dealerPlay();
+};
+
+els.newGameBtn.onclick = startGame;
+</script>
+</body>
+</html>
