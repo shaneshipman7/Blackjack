@@ -424,15 +424,19 @@
 
   function dealerPlay() {
     updateDisplay(false);
-    let val = handValue(dealerHand);
+    const pVal = handValue(playerHand);
     const drawNext = () => {
-      if (val < 17) {
+      let val = handValue(dealerHand);
+      // Dealer hits if:
+      // 1. Under 17 (standard rule), OR
+      // 2. At 17-21 but still losing to the player (still a chance to win by drawing)
+      const shouldHit = val < 17 || (val <= 21 && val <= pVal && val < 21);
+      if (shouldHit) {
         dealerHand.push(deck.pop());
-        val = handValue(dealerHand);
         updateDisplay(false);
         setTimeout(drawNext, 340);
       } else {
-        const pVal = handValue(playerHand);
+        val = handValue(dealerHand);
         if (val > 21)        endGame("Dealer busts — You win!", 'win');
         else if (val > pVal) endGame("Dealer wins.", 'lose');
         else if (val < pVal) endGame("You win!", 'win');
